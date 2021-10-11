@@ -22,7 +22,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use('/trips', roadtripper)
-
+app.use('/auth', authController)
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`)
