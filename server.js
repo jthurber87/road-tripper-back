@@ -1,14 +1,13 @@
 //dep
 require('dotenv').config()
 require('./db/db')
-const DB_URL = process.env.DB_URL
 const roadtripper = require('./controllers/roadTripper.js')
 const authController = require('./controllers/auth.js')
 const express = require('express')
 const app = express()
 const cors = require('cors')
 const PORT = process.env.PORT || 9000
-const whitelist = ["http://localhost:3000", DB_URL];
+const whitelist = ["http://localhost:3000", process.env.DB_URL];
 const corsOptions = {
   origin: function(origin, callback) {
     if (whitelist.indexOf(origin) != -1 || !origin) {

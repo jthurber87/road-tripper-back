@@ -1,7 +1,7 @@
 require('dotenv').config()
-const mongoose = require('mongoose')
-const DB_URL = process.env.DB_URL || 'mongodb://localhost/roadtripper'
 
+const mongoose = require('mongoose')
+// const DB_URL = process.env.DB_URL
 //Error/DC
 mongoose.connection.on('error', err => console.log(err.message + ' is Mongod not running?'))
 mongoose.connection.on('disconnected', () => console.log('mongo disconnected'))
