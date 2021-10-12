@@ -1,6 +1,6 @@
 require('dotenv').config()
 const mongoose = require('mongoose')
-const DB_URL = 'mongodb+srv://jthurber87:Cheetoh87!@cluster0.u3c9b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const DB_URL = process.env.DB_URL || 'mongodb://localhost/roadtripper'
 
 //Error/DC
 mongoose.connection.on('error', err => console.log(err.message + ' is Mongod not running?'))
