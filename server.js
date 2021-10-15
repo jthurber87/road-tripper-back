@@ -7,7 +7,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const PORT = process.env.PORT || 9000
-const whitelist = ["http://localhost:3000", process.env.DB_URL];
+const whitelist = ["http://10.0.0.89:9000", process.env.DB_URL];
 const corsOptions = {
   origin: function(origin, callback) {
     if (whitelist.indexOf(origin) != -1 || !origin) {
